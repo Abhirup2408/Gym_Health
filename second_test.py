@@ -26,17 +26,18 @@ df['RatingDesc'] = df.apply(lambda row: impute_rating(row), axis=1)
 
 # Dictionary to map equipment to image paths
 equipment_images = {
-    "Bands": os.path.join(equipment_dir, "Bands.jpg"),
-    "Barbell": os.path.join(equipment_dir, "barbell.jpg"),
-    "Body Only": os.path.join(equipment_dir, "Body Only.jpg"),
-    "Cable": os.path.join(equipment_dir, "Cable Machine.jpg"),
-    "Dumbbell": os.path.join(equipment_dir, "Dumbbell.jpg"),
-    "Exercise Ball": os.path.join(equipment_dir, "ExerciseBall.jpg"),
-    "E-Z Curl Bar": os.path.join(equipment_dir, "E-Z Curl Bar.jpg"),
-    "Foam Roll": os.path.join(equipment_dir, "Foam Roll.jpg"),
-    "Kettlebells": os.path.join(equipment_dir, "Kettlebell.jpg"),
-    "Machine": os.path.join(equipment_dir, "Machine.jpg"),
-    "Medicine Ball": os.path.join(equipment_dir, "Medicine Ball.jpg"),
+    "Bands": "Equipments\Bands.jpg",
+    "Barbell": "Equipments\barbell.jpg",
+    "Body Only": "Equipments\Body Only.jpg",
+    "Barbell": "Equipments\barbell.jpg",
+    "Cable": "Equipments\Cable Machine.jpg",
+    "Dumbbell": "Equipments\Dumbbell.jpg",
+    "Exercise Ball": "Equipments\ExerciseBall.jpg",
+    "E-Z Curl Bar": "Equipments\E-Z Curl Bar.jpg",
+    "Foam Roll": "Equipments\Foam Roll.jpg",
+    "Kettlebells": "Equipments\Kettlebell.jpg",
+    "Machine": "Equipments\Machine.jpg",
+    "Medicine Ball": "Equipments\Medicine Ball.jpg"
     # Add more equipment as needed
 }
 
