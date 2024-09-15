@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 
 # Load the dataset
-df = pd.read_csv(r'C:\Users\ACER\Downloads\megaGymDataset.csv', index_col=0)
+df = pd.read_csv(r'megaGymDataset.csv', index_col=0)
 
 # Dropping duplicates and NaN values
 df.drop_duplicates(inplace=True, keep='first')
@@ -26,7 +26,7 @@ df['RatingDesc'] = df.apply(lambda row: impute_rating(row), axis=1)
 
 # Dictionary to map equipment to image paths
 equipment_images = {
-    "Bands": "Final_Gym\Equipments\Bands.jpg",
+    "Bands": "Equipments\Bands.jpg",
     "Barbell": "Final_Gym\Equipments\barbell.jpg",
     "Body Only": "Final_Gym\Equipments\Body Only.jpg",
     "Barbell": "Final_Gym\Equipments\barbell.jpg",
