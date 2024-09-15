@@ -26,18 +26,18 @@ df['RatingDesc'] = df.apply(lambda row: impute_rating(row), axis=1)
 
 # Dictionary to map equipment to image paths
 equipment_images = {
-    "Bands": "Equipments\Bands.jpg",
-    "Barbell": "Equipments\barbell.jpg",
-    "Body Only": "Equipments\Body Only.jpg",
-    "Barbell": "Equipments\barbell.jpg",
-    "Cable": "Equipments\Cable Machine.jpg",
-    "Dumbbell": "Equipments\Dumbbell.jpg",
-    "Exercise Ball": "Equipments\ExerciseBall.jpg",
-    "E-Z Curl Bar": "Equipments\E-Z Curl Bar.jpg",
-    "Foam Roll": "Equipments\Foam Roll.jpg",
-    "Kettlebells": "Equipments\Kettlebell.jpg",
-    "Machine": "Equipments\Machine.jpg",
-    "Medicine Ball": "Equipments\Medicine Ball.jpg"
+    "Bands": "Bands.jpg",
+    "Barbell": "barbell.jpg",
+    "Body Only": "Body Only.jpg",
+    "Barbell": "barbell.jpg",
+    "Cable": "Cable Machine.jpg",
+    "Dumbbell": "Dumbbell.jpg",
+    "Exercise Ball": "ExerciseBall.jpg",
+    "E-Z Curl Bar": "E-Z Curl Bar.jpg",
+    "Foam Roll": "Foam Roll.jpg",
+    "Kettlebells": "Kettlebell.jpg",
+    "Machine": "Machine.jpg",
+    "Medicine Ball": "Medicine Ball.jpg"
     # Add more equipment as needed
 }
 
