@@ -82,7 +82,7 @@ option = st.selectbox("Choose an option",
                        "Filter by BodyPart and Level"])
 
 # Dropdowns for the inputs
-body_parts = ['Abdominals', 'Abductors', 'Biceps', 'Calves', 'Forearms', 'Glutes', 'Hamstrings', 'Lats', 
+body_parts = ['Abdominals', 'Abductors', 'Biceps', 'Calves', 'Chest, 'Forearms', 'Glutes', 'Hamstrings', 'Lats', 
               'Lower Back', 'Middle Back', 'Quadriceps', 'Shoulders', 'Traps', 'Triceps']
 exercise_types = ['Cardio', 'Olympic Weightlifting', 'Plyometrics', 'Powerlifting', 'Strength', 
                   'Stretching', 'Strongman']
