@@ -41,6 +41,16 @@ equipment_images = {
     # Add more equipment as needed
 }
 
+# Dictionary to map exercise titles to video (GIF) paths
+exercise_videos = {
+    "Close-grip bench press": r"bench-press-regular-bench-press.gif.mp4"
+    # Add more exercise titles and their corresponding GIF paths
+}
+
+def display_video(video_path, title, width=300):
+    st.write(f"**{title}**")  # Display title as caption above the video
+    st.video(video_path, start_time=0)  # Use st.video to display MP4
+
 # Functions for the different filtering options
 def get_top_exercises_by_bodypart(body_part):
     df1 = df.groupby('BodyPart').apply(lambda x: x.nlargest(5, 'Rating')).reset_index(drop=True)
@@ -104,6 +114,8 @@ if option == "Filter by BodyPart":
             # Display image of the equipment
             if row['Equipment'] in equipment_images:
                 st.image(equipment_images[row['Equipment']], caption=row['Equipment'], width=150)
+            if row['Title'] in exercise_videos:
+                display_video(exercise_videos[row['Title']], title=row['Title'], width=300)
             st.write(f"**Sets**: {row['Sets']} | **Reps per Set**: {row['Reps per Set']}")
             st.write("---")
 
@@ -122,6 +134,8 @@ elif option == "Filter by Type":
             # Display image of the equipment
             if row['Equipment'] in equipment_images:
                 st.image(equipment_images[row['Equipment']], caption=row['Equipment'], width=150)
+            if row['Title'] in exercise_videos:
+                display_video(exercise_videos[row['Title']], title=row['Title'], width=300)
             st.write(f"**Sets**: {row['Sets']} | **Reps per Set**: {row['Reps per Set']}")
             st.write("---")
 
@@ -141,6 +155,8 @@ elif option == "Filter by Type and Level":
             # Display image of the equipment
             if row['Equipment'] in equipment_images:
                 st.image(equipment_images[row['Equipment']], caption=row['Equipment'], width=150)
+            if row['Title'] in exercise_videos:
+                display_video(exercise_videos[row['Title']], title=row['Title'], width=300)
             st.write(f"**Sets**: {row['Sets']} | **Reps per Set**: {row['Reps per Set']}")
             st.write("---")
 
@@ -160,5 +176,7 @@ elif option == "Filter by BodyPart and Level":
             # Display image of the equipment
             if row['Equipment'] in equipment_images:
                 st.image(equipment_images[row['Equipment']], caption=row['Equipment'], width=150)
+            if row['Title'] in exercise_videos:
+                display_video(exercise_videos[row['Title']], title=row['Title'], width=300)
             st.write(f"**Sets**: {row['Sets']} | **Reps per Set**: {row['Reps per Set']}")
             st.write("---")
