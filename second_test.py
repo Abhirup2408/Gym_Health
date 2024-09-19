@@ -40,7 +40,7 @@ def add_bg_from_local(image_file):
     )
 
 # Call the function to set the background image
-add_bg_from_local('background_image.jpg')  # Make sure the image is in the app's folder
+add_bg_from_local(r'background_image.jpg')  # Make sure the image is in the app's folder
 
 # Dictionary to map equipment to image paths
 equipment_images = {
