@@ -24,6 +24,24 @@ def impute_rating(row):
 
 df['RatingDesc'] = df.apply(lambda row: impute_rating(row), axis=1)
 
+def add_bg_from_local(image_file):
+    with open(image_file, "rb") as image:
+        encoded_string = base64.b64encode(image.read())
+    st.markdown(
+        f"""
+        <style>
+        .stApp {{
+            background-image: url(data:image/{"png"};base64,{encoded_string.decode()});
+            background-size: cover;
+        }}
+        </style>
+        """,
+        unsafe_allow_html=True
+    )
+
+# Call the function to set the background image
+add_bg_from_local('background_image.jpg')  # Make sure the image is in the app's folder
+
 # Dictionary to map equipment to image paths
 equipment_images = {
     "Bands": "Bands.jpg",
