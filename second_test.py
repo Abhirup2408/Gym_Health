@@ -1,5 +1,6 @@
 import streamlit as st
 import pandas as pd
+import base64
 
 # Load the dataset
 df = pd.read_csv(r'megaGymDataset.csv', index_col=0)
